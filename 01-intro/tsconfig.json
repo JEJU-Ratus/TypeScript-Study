@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // 최신 자바스크립트 문법, ES2020(옵셔널 체이닝…)
+    "module": "CommonJS", // Node.js 실행 환경에 맞춤
+    // "outDir": "./dist", // 컴파일된 JS 파일 출력 위치
+    "strict": true, // 엄격한 타입 검사, 타입 안정성 ↑
+    "esModuleInterop": true, // import/export 호환성
+    "skipLibCheck": true // 라이브러리 타입 검사 생략 (속도 ↑)
+  },
+  "include": ["./**/*.ts"], // 컴파일 대상에서 프로젝트 내 모든 TS 파일 포함
+  "exclude": ["node_modules"] // 컴파일 대상에서 node_modules는 제외
+}
