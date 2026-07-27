@@ -4,7 +4,6 @@ export function add(todos: Todo[], input: TodoCreate): Todo[] {
   const id = todos.length ? Math.max(...todos.map(todo => todo.id)) + 1 : 1;
   const now = new Date().toISOString();
   const next: Todo = { id, title: input.title, done: false, due: input.due, createdAt: now };
-  console.log(todos);
   return [...todos, next];
 }
 
