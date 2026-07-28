@@ -28,7 +28,7 @@ function App() {
       <hr />
       <ul>
         {todos.map(t => (
-          <TodoItem key={t.id} todo={t} />
+          <TodoItem key={t.id} todo={t} onToggle={() => setTodos(prev => S.toggle(prev, t.id))} />
         ))}
       </ul>
     </>
