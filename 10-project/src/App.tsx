@@ -33,6 +33,7 @@ function App() {
             todo={t}
             onToggle={() => setTodos(prev => S.toggle(prev, t.id))}
             onDelete={() => setTodos(prev => S.remove(prev, t.id))}
+            onEdit={patch => setTodos(prev => S.update(prev, t.id, patch))}
           />
         ))}
       </ul>
