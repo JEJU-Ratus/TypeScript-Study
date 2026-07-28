@@ -20,7 +20,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
     <li>
       {edit ? (
         <>
-          <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
+          <input type="text" value={title ?? ""} onChange={e => setTitle(e.target.value)} />
           <input type="date" value={due ?? ""} onChange={e => setDue(e.target.value)} />
           <button type="button" onClick={saveEdit}>
             입력
